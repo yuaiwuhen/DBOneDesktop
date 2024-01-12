@@ -1,0 +1,52 @@
+{
+    "appId": "com.example.app",
+    "productName": "vite-electron",
+
+    "directories": {
+        "output": "release",
+        "app": "dist"
+    },
+    "win": {
+        "icon": "src/assets/logo.ico",
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64"
+                ]
+            }
+        ]
+    },
+    "mac": {
+        "icon": "src/assets/logo.png",
+        "target": {
+            "target": "dmg",
+            "arch": [
+                "x64",
+                "arm64"
+            ]
+        }
+    },
+    "linux": {
+        "icon": "src/assets/logo.png",
+        "target": {
+            "target": "AppImage",
+            "arch": [
+                "x64"
+            ]
+        }
+    },
+    "asar": true,
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "installerIcon": "src/assets/logo.ico",
+        "uninstallerIcon": "src/assets/logo.ico",
+        "installerHeaderIcon": "src/assets/logo.ico",
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true
+    },
+    "extraMetadata": {
+        "main": "background.js"
+    }
+}

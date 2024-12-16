@@ -1,5 +1,4 @@
 import type { Plugin } from 'vite'
-import * as electronBuilder from 'electron-builder'
 import path from 'path'
 import fs from 'fs'
 
@@ -14,7 +13,7 @@ export const viteElectronBuild = (): Plugin => {
       const initElectron = () => {
         // 使用esbuild编译TypeScript代码为JavaScript
         require('esbuild').buildSync({
-          entryPoints: ['src/background.ts'],
+          entryPoints: ['client/src/background.ts'],
           bundle: true,
           outfile: 'dist/background.js',
           platform: 'node',
@@ -27,7 +26,7 @@ export const viteElectronBuild = (): Plugin => {
       initElectron()
 
       // 修改package.json文件的main字段 不然会打包失败
-      const json = JSON.parse(fs.readFileSync('package.json', 'utf-8'))
+      const json = JSON.parse(fs.readFileSync('client/package.json', 'utf-8'))
       json.main = 'background.js'
       fs.writeSync(fs.openSync('dist/package.json', 'w'), JSON.stringify(json, null, 2))
 

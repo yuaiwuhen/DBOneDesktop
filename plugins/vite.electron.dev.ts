@@ -14,9 +14,9 @@ export const viteElectronDev = (): Plugin => {
             const initElectron = () => {
                 // 使用esbuild编译TypeScript代码为JavaScript
                 require('esbuild').buildSync({
-                    entryPoints: ['src/background.ts'],
+                    entryPoints: ['client/src/background.ts'],
                     bundle: true,
-                    outfile: 'dist/background.js',
+                    outfile: 'client/dist/background.js',
                     platform: 'node',
                     target: 'node18',
                     external: ['electron']
@@ -32,15 +32,15 @@ export const viteElectronDev = (): Plugin => {
                 const addressInfo = server?.httpServer?.address() as AddressInfo
                 const IP = `http://localhost:${addressInfo.port}`
                 // 启动Electron进程
-                let electronProcess = spawn(require('electron'), ['dist/background.js', IP])
+                let electronProcess = spawn(require('electron'), ['client/dist/background.js', IP])
 
                 // 监听主进程代码的更改
-                fs.watchFile('src/background.ts', () => {
+                fs.watchFile('client/src/background.ts', () => {
                     // 杀死当前的Electron进程
                     electronProcess.kill()
                     // 重新编译主进程代码并重新启动Electron进程
                     initElectron()
-                    electronProcess = spawn(require('electron'), ['dist/background.js', IP])
+                    electronProcess = spawn(require('electron'), ['client/dist/background.js', IP])
                 })
 
                 // 监听Electron进程的stdout输出

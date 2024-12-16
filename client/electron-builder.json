@@ -1,11 +1,21 @@
 {
-    "appId": "com.example.app",
-    "productName": "vite-electron",
-
+    "appId": "DBOneDesktop",
+    "productName": "DBOne Desktop",
+    "artifactName": "${productName}.${version}.${ext}",
+    "copyright": "Copyright © 2024 dbone.test",
+    "releaseInfo":{
+        "releaseNotesFile":"notes/latest.md"
+      },
     "directories": {
-        "output": "release",
-        "app": "dist"
+        "output": "../release",
+        "app": "../dist"
     },
+    "publish": [{
+        "provider": "github",
+        "owner": "yuaiwuhen",
+        "repo": "DBOneDesktop",
+        "releaseType": "prerelease"
+      }],
     "win": {
         "icon": "src/assets/logo.ico",
         "target": [

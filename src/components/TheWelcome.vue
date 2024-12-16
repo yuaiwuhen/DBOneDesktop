@@ -18,7 +18,7 @@ const editableTabs = ref([
     content: 'Tab 1 content',
   },
   {
-    title: 'Tab 2',
+    title: 'Tab ,
     name: '2',
     content: 'Tab 2 content',
   },

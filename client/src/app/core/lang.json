@@ -1,0 +1,42 @@
+{
+    "en": {
+        "app.title": "ZTF Automated Testing Tool",
+        "app.about": "About",
+        "app.exit": "Exit",
+        "app.edit": "Edit",
+        "app.undo": "Undo",
+        "app.redo": "Redo",
+        "app.cut": "Cut",
+        "app.copy": "Copy",
+        "app.paste": "Paste",
+        "app.select_all": "Select All",
+        "app.view": "View",
+        "app.switch_to_full_screen": "Switch To Full Screen",
+        "app.window": "Window",
+        "app.minimize": "Minimize",
+        "app.close": "Close",
+        "app.bring_all_to_front": "Bring All To Front",
+        "app.help": "Help",
+        "app.website": "Web Site"
+    },
+    "zh-cn": {
+        "app.title": "ZTF自动化测试框架",
+        "app.about": "关于",
+        "app.exit": "退出",
+        "app.edit": "编辑",
+        "app.undo": "撤销",
+        "app.redo": "重做",
+        "app.cut": "剪切",
+        "app.copy": "复制",
+        "app.paste": "黏贴",
+        "app.select_all": "选择所有",
+        "app.view": "查看",
+        "app.switch_to_full_screen": "切换全屏",
+        "app.window": "窗口",
+        "app.minimize": "最小化",
+        "app.close": "关闭",
+        "app.bring_all_to_front": "全部置于顶层",
+        "app.help": "帮助",
+        "app.website": "网站"
+    }
+}

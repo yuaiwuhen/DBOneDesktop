@@ -7,17 +7,27 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElTabPane: typeof import('element-plus/es')['ElTabPane']
-    ElTabs: typeof import('element-plus/es')['ElTabs']
+    Connection: typeof import('./src/components/mysql/Connection.vue')['default']
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
+    IEpClose: typeof import('~icons/ep/close')['default']
+    ListItem: typeof import('./src/components/mysql/ListItem.vue')['default']
+    Navbar: typeof import('./src/components/main/Navbar.vue')['default']
+    Notifycation: typeof import('./src/components/main/Notifycation.vue')['default']
+    Progress: typeof import('./src/components/main/Progress.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
+    UpdateCheck: typeof import('./src/components/main/UpdateCheck.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
+    WindowToolbar: typeof import('./src/components/main/WindowToolbar.vue')['default']
   }
 }
